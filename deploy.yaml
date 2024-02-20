@@ -1,0 +1,16 @@
+- name: deploy and services
+  hosts: master
+  gather_facts: no
+  become: yes
+
+  tasks:
+    - name: git clone or pull
+      git: 
+        repo: https://github.com/beomtaek/cicdtest.git
+        dest: /root/cicdtest
+        clone: yes
+        update: yes
+        force: yes
+
+    - name: kubectl apply
+      shell: kubectl apply -f /root/cicdtest/web.yaml
