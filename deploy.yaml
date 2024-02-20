@@ -6,7 +6,7 @@
   tasks:
     - name: git clone or pull
       git: 
-        repo: https://github.com/beomtaek/cicdtest.git
+        repo: https://github.com/myeonghyun-7011/cicdtest.git
         dest: /root/cicdtest
         clone: yes
         update: yes
