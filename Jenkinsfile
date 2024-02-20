@@ -3,14 +3,14 @@ pipeline {
   stages {
     stage('git scm update') {
       steps {
-        git url: 'https://github.com/beomtaek/cicdtest.git', branch: 'main'
+        git url: 'https://github.com/myeonghyun-7011/cicdtest.git', branch: 'main'
       }
     }
     stage('docker build and push') {
       steps {
         sh '''
-        sudo docker build -t brian24/cicdtest:green .
-        sudo docker push brian24/cicdtest:green
+        sudo docker build -t myeonghyun-7011/cicdtest:green .
+        sudo docker push myeonghyun-7011/cicdtest:green
         '''
       }
     }
