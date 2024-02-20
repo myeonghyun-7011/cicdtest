@@ -1,6 +1,6 @@
 #!/bin/bash
 color=""
-color=$(grep deploy.yaml | gawk '{print $2}' | gawk -F: '{print $2}')
+color=$(grep rlaaudgus web.yaml | gawk '{print $2}' | gawk -F: '{print $2}')
 
 if [ $color = 'blue' ]
 then
