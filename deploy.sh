@@ -1,8 +1,8 @@
 #!/bin/bash
 color=""
-color=$(grep rlaaudgus.yaml | gawk '{print $2}' | gawk -F: '{print $2}')
+color=$(grep web.yaml | gawk '{print $2}' | gawk -F: '{print $2}')
 
-if [ $color = 'green' ]
+if [ $color = 'blue' ]
 then
         sed -i 's/blue/green/g' web.yaml
         color="green"
