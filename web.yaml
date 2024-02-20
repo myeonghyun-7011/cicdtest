@@ -6,15 +6,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      color: blue
+      color: grenn
   template:
     metadata:
       labels:
-        color: blue
+        color: green
     spec:
       containers:
       - name: web
-        image: brian24/cicdtest:blue
+        image: rlaaudgus/cicdtest:blue
         imagePullPolicy: Always
         resources:
           limits:
@@ -30,7 +30,7 @@ metadata:
 spec:
   type: LoadBalancer   
   selector:         
-    color: blue
+    color: green
   ports:
   - protocol: TCP
     port: 80      
