@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      color: green
+      color: blue
   template:
     metadata:
       labels:
-        color: green
+        color: blue
     spec:
       containers:
       - name: web
@@ -30,7 +30,7 @@ metadata:
 spec:
   type: LoadBalancer   
   selector:         
-    color: green
+    color: blue
   ports:
   - protocol: TCP
     port: 80      
